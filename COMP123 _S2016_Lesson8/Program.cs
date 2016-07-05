@@ -11,11 +11,11 @@ namespace COMP123__S2016_Lesson8
         static void Main(string[] args)
         {
             int numerator = 5;
-            int denominator = 0;
+            int denominator = 10;
 
             try
             {
-                int result = numerator / denominator;
+                float result = numerator / denominator;
                 Console.WriteLine("Result: " + result);
             }
             catch (Exception exception)
