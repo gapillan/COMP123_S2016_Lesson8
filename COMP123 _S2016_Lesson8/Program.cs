@@ -23,9 +23,16 @@ namespace COMP123__S2016_Lesson8
 
                 Console.WriteLine("Result: " + Divide(firstNumber, secondNumber));
             }
-            catch (Exception exception) // <-- note: you do not necessarily need the exception bracket 
+            catch (FormatException) // <-- note: you do not necessarily need the exception bracket 
             {
-                Console.WriteLine("Error: Invalid Input");
+                Console.WriteLine("Error: Please enter an integer");
+                //Console.WriteLine("Error: Invalid Input");
+                //Console.WriteLine(exception.Message);
+            }
+            catch (OverflowException) 
+            {
+                Console.WriteLine("Error: Number is too long");
+                Console.WriteLine("Please enter an integer smaller than 2,147,483,647");
             }
         }
          
