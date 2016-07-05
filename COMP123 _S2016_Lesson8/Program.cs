@@ -25,7 +25,7 @@ namespace COMP123__S2016_Lesson8
             }
             catch (Exception exception) // <-- note: you do not necessarily need the exception bracket 
             {
-                Console.WriteLine("Please enter a valid integer");
+                Console.WriteLine("Error: Invalid Input");
             }
         }
          
