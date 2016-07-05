@@ -15,7 +15,7 @@ namespace COMP123__S2016_Lesson8
 
             try
             {
-                float result = numerator / denominator;
+                double result = Convert.ToDouble(numerator / denominator);
                 Console.WriteLine("Result: " + result);
             }
             catch (Exception exception)
