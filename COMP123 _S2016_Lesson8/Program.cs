@@ -10,7 +10,16 @@ namespace COMP123__S2016_Lesson8
     {
         static void Main(string[] args)
         {
-            Divide();
+            int firstNumber;
+            int secondNumber;
+
+            Console.Write("Enter an Integer: ");
+            firstNumber = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter another Integer: ");
+            secondNumber = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Result: " + Divide(firstNumber, secondNumber));
+            
         }
          
         private static float Divide(int numerator, int denominator) 
@@ -22,12 +31,13 @@ namespace COMP123__S2016_Lesson8
             try
             {
                 // double result = Convert.ToDouble(numerator) / Convert.ToDouble(denominator); <-- if using double
-                float result = Convert.ToSingle(numerator) / Convert.ToSingle(denominator); // <-- if using float 
-                Console.WriteLine("Result: " + result);
+                // float result = Convert.ToSingle(numerator) / Convert.ToSingle(denominator); // <-- if using float
+                int result =numerator / denominator;
+                return result;
             }
             catch (Exception exception)
             {
-                Console.WriteLine("Error: " + exception.Message);
+                Console.Write("Error: " + exception.Message);
                 return 0f;
             }
         }
