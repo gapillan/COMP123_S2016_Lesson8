@@ -13,13 +13,20 @@ namespace COMP123__S2016_Lesson8
             int firstNumber;
             int secondNumber;
 
-            Console.Write("Enter an Integer: ");
-            firstNumber = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Enter another Integer: ");
-            secondNumber = Convert.ToInt32(Console.ReadLine());
+            try
+            {
 
-            Console.Write("Result: " + Divide(firstNumber, secondNumber));
-            
+                Console.Write("Enter an Integer: ");
+                firstNumber = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Enter another Integer: ");
+                secondNumber = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Result: " + Divide(firstNumber, secondNumber));
+            }
+            catch (Exception exception) // <-- note: you do not necessarily need the exception bracket 
+            {
+                Console.WriteLine("Please enter a valid integer");
+            }
         }
          
         private static float Divide(int numerator, int denominator) 
